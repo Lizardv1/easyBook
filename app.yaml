@@ -1,0 +1,37 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: easy-book
+  labels:
+    app: easy-book
+spec:
+  type: ClusterIP
+  selector:
+    app: easy-book
+  ports:
+    - name: tcp
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: easy-book
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: easy-book
+  template:
+    metadata:
+      labels:
+        app: easy-book
+        version: v1
+    spec:
+      containers:
+      - name: easy-book
+        image: easy-book
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
