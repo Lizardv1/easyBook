@@ -141,6 +141,18 @@
                     <jdbcPassword>postgres</jdbcPassword>
                     <packageName>org.easybook.booking.domain</packageName>
                     <targetFolder>${project.basedir}/target/generated-sources/java</targetFolder>
+                    <typeMappings>
+                        <typeMapping>
+                            <table>bookings</table>
+                            <column>check_in_date</column>
+                            <type>java.time.LocalDate</type>
+                        </typeMapping>
+                        <typeMapping>
+                            <table>bookings</table>
+                            <column>check_out_date</column>
+                            <type>java.time.LocalDate</type>
+                        </typeMapping>
+                    </typeMappings>
                 </configuration>
                 <dependencies>
                     <dependency>

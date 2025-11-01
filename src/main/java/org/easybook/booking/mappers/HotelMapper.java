@@ -19,8 +19,6 @@ public class HotelMapper {
                 .phone(tuple.get(hotel.phone))
                 .email(tuple.get(hotel.email))
                 .description(tuple.get(hotel.description))
-                .createdAt(tuple.get(hotel.createdAt).toLocalDateTime())
-                .updatedAt(tuple.get(hotel.updatedAt).toLocalDateTime())
                 .build();
     }
 

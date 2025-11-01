@@ -3,6 +3,7 @@ package org.easybook.booking.service;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import org.easybook.booking.domain.Hotel;
+import org.easybook.booking.dto.HotelsRequest;
 import org.easybook.booking.repository.HotelRepository;
 
 import java.util.List;
@@ -17,7 +18,7 @@ public class HotelService {
         this.hotelRepository = hotelRepository;
     }
 
-    public List<Hotel> findAll() {
-        return hotelRepository.findAll();
+    public List<Hotel> findAll(HotelsRequest request) {
+        return hotelRepository.findAll(request);
     }
 }
