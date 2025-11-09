@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -19,6 +20,7 @@ public class Hotel {
     private Address address;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+    private List<OptionPair> options;
 
     private List<Room> rooms;
 }

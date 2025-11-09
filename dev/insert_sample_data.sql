@@ -8,6 +8,15 @@ INSERT INTO hotels (id, address_id, name, description, phone, email) VALUES
 (2, 2, 'Ocean Breeze Resort', 'Beachfront resort with panoramic ocean views and spa facilities', '+1-310-555-0102', 'hello@oceanbreeze.com'),
 (3, 3, 'City Center Inn', 'Modern downtown hotel perfect for business and leisure travelers', '+1-312-555-0103', 'contact@citycenter.com');
 
+INSERT INTO hotel_options (id, name)
+VALUES (1, 'Parking')
+     , (2, 'Not smoking');
+
+INSERT INTO hotel_to_option (hotel_id, option_id)
+VALUES (1, 1)
+     , (2, 1)
+     , (2, 2)
+
 INSERT INTO rooms (id, hotel_id, number, type, description, capacity) VALUES
 (1, 1, '101', 'Standard', 'Comfortable room with city view and modern amenities', 2),
 (2, 1, '102', 'Deluxe', 'Spacious room with king bed and premium city views', 2),
@@ -18,6 +27,17 @@ INSERT INTO rooms (id, hotel_id, number, type, description, capacity) VALUES
 (7, 3, '301', 'Standard', 'Clean and comfortable room perfect for business travelers', 2),
 (8, 3, '302', 'Business', 'Spacious business room with work desk and city view', 2),
 (9, 3, '303', 'Executive Suite', 'Premium suite with conference area and city panorama', 4);
+
+INSERT INTO hotel_options (id, name)
+VALUES (1, 'Own Shower')
+     , (2, 'TV'),
+     , (3, 'Radio')
+
+INSERT INTO hotel_to_option (hotel_id, option_id)
+VALUES (1, 1)
+     , (2, 1)
+     , (2, 2)
+     , (2, 3)
 
 INSERT INTO customers (id, first_name, last_name, email, phone, password) VALUES
 (1, 'John', 'Smith', 'john.smith@email.com', '+1-555-0001', '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy'),
@@ -46,7 +66,7 @@ INSERT INTO bookings (room_id, customer_id, check_in_date, check_out_date) VALUE
 -- Hotel 2 - Room Ocean-2
 (5, 5, '2025-11-03', '2025-11-08'),
 (5, 3, '2025-11-14', '2025-11-19'),
-(5, 2, '2025-11-25', '2025-11-31'),
+(5, 2, '2025-11-25', '2025-11-30'),
 -- Hotel 2 - Room Beach-1
 (6, 1, '2025-11-07', '2025-11-12'),
 (6, 4, '2025-11-16', '2025-11-21'),
@@ -64,41 +84,3 @@ INSERT INTO bookings (room_id, customer_id, check_in_date, check_out_date) VALUE
 (9, 4, '2025-11-11', '2025-11-16'),
 (9, 3, '2025-11-25', '2025-11-01');
 
--- November bookings
-INSERT INTO bookings (room_id, customer_id, check_in_date, check_out_date) VALUES
--- Hotel 1 - Room 101
-(1, 4, '2025-11-01', '2025-11-06'),
-(1, 5, '2025-11-10', '2025-11-15'),
-(1, 1, '2025-11-20', '2025-11-25'),
--- Hotel 1 - Room 201
-(2, 1, '2025-11-01', '2025-11-08'),
-(2, 3, '2025-11-12', '2025-11-17'),
-(2, 2, '2025-11-22', '2025-11-28'),
--- Hotel 1 - Room 301
-(3, 2, '2025-11-05', '2025-11-10'),
-(3, 5, '2025-11-14', '2025-11-20'),
-(3, 4, '2025-11-25', '2025-11-30'),
--- Hotel 2 - Room Ocean-1
-(4, 3, '2025-11-01', '2025-11-06'),
-(4, 2, '2025-11-10', '2025-11-14'),
-(4, 4, '2025-11-20', '2025-11-26'),
--- Hotel 2 - Room Ocean-2
-(5, 4, '2025-11-03', '2025-11-08'),
-(5, 1, '2025-11-12', '2025-11-17'),
-(5, 5, '2025-11-23', '2025-11-29'),
--- Hotel 2 - Room Beach-1
-(6, 2, '2025-11-06', '2025-11-11'),
-(6, 3, '2025-11-14', '2025-11-19'),
-(6, 1, '2025-11-26', '2025-12-02'),
--- Hotel 3 - Room 201
-(7, 5, '2025-11-01', '2025-11-05'),
-(7, 1, '2025-11-09', '2025-11-13'),
-(7, 4, '2025-11-18', '2025-11-24'),
--- Hotel 3 - Room 302
-(8, 1, '2025-11-03', '2025-11-07'),
-(8, 4, '2025-11-11', '2025-11-15'),
-(8, 3, '2025-11-21', '2025-11-27'),
--- Hotel 3 - Room 501
-(9, 2, '2025-11-02', '2025-11-07'),
-(9, 5, '2025-11-10', '2025-11-15'),
-(9, 1, '2025-11-23', '2025-11-29');
