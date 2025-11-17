@@ -10,7 +10,6 @@ import org.easybook.booking.domain.Hotel;
 import org.easybook.booking.dto.HotelsRequest;
 import org.easybook.booking.dto.PageResponse;
 import org.easybook.booking.service.HotelService;
-import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
 
 import java.util.List;
 
