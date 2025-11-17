@@ -1,4 +1,4 @@
-package org.easybook.service.domain;
+package org.easybook.booking.domain;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -9,10 +9,11 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
-public class Hotel {
+public class Room {
     private Long id;
-    private String name;
+    private Integer capacity;
+    private String number;
+    private String type;
     private String description;
-
-    private List<Room> rooms;
+    private List<String> options;
 }
