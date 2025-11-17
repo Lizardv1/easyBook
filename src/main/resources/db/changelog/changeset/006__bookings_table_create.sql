@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset virchenko:004
+--changeset virchenko:006
 
 CREATE TABLE IF NOT EXISTS bookings (
     id BIGSERIAL PRIMARY KEY,

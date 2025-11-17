@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
 import java.util.Set;
 
 @Getter
@@ -15,5 +16,5 @@ public class Room {
     private String number;
     private String type;
     private String description;
-    private Set<String> options;
+    private List<String> options;
 }

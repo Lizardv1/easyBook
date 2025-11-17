@@ -3,7 +3,8 @@ package org.easybook.booking.dto;
 import java.util.List;
 
 public record RoomFilterRequest(
-        String type,
+        Integer type,
+        Integer capacity,
         List<Integer> options
 ) {
 }

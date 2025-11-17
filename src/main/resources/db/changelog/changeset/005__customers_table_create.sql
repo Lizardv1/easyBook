@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset virchenko:003
+--changeset virchenko:005
 
 CREATE TABLE IF NOT EXISTS customers (
     id BIGSERIAL PRIMARY KEY,

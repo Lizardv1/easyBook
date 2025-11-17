@@ -12,7 +12,7 @@ import java.util.Set;
 @Setter
 @Builder
 public class Hotel {
-    private Long id;
+    private Integer id;
     private String name;
     private String phone;
     private String email;
@@ -20,7 +20,6 @@ public class Hotel {
     private Address address;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
-    private List<OptionPair> options;
-
+    private List<String> options;
     private List<Room> rooms;
 }
